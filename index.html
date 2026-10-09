@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SkillTrack is a Java web application for managing student skills, tracking learning progress, and setting goals.">
+  <title>SkillTrack | Student Skill Management System</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0b1020;
+      --panel: #131b30;
+      --text: #f1f5f9;
+      --muted: #a7b3c9;
+      --accent: #72a7ff;
+      --border: #28344d;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .nav {
+      max-width: 1120px;
+      margin: auto;
+      padding: 22px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .brand { font-size: 1.25rem; font-weight: 800; }
+    .brand span { color: var(--accent); }
+    .nav-link { color: var(--muted); font-size: .93rem; }
+
+    .hero {
+      max-width: 1120px;
+      margin: auto;
+      padding: 100px 24px 86px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 6px 14px;
+      color: var(--accent);
+      font-size: .85rem;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 7vw, 5rem);
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
+    }
+
+    h1 span {
+      background: linear-gradient(90deg, #72a7ff, #a9a0ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      max-width: 690px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 21px;
+      border-radius: 9px;
+      font-weight: 700;
+      border: 1px solid var(--border);
+      transition: transform .2s, background .2s;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+    .primary { background: #72a7ff; color: #081122; border-color: #72a7ff; }
+    .secondary { background: var(--panel); }
+
+    .section {
+      max-width: 1120px;
+      margin: auto;
+      padding: 55px 24px;
+    }
+
+    .section h2 { font-size: 2rem; margin-bottom: 12px; }
+    .intro { color: var(--muted); margin-bottom: 30px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      padding: 25px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+    }
+
+    .icon { font-size: 1.8rem; margin-bottom: 12px; }
+    .card h3 { margin-bottom: 9px; font-size: 1.1rem; }
+    .card p { color: var(--muted); font-size: .95rem; }
+
+    .tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .tag {
+      padding: 8px 14px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: #dce6f8;
+      font-size: .9rem;
+    }
+
+    .architecture {
+      padding: 23px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      text-align: center;
+      overflow-wrap: anywhere;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .note {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 30px 20px;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding-top: 70px; }
+      h1 { letter-spacing: -1px; }
+      .nav { padding: 18px; }
+      .section { padding-top: 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a class="brand" href="#">Skill<span>Track</span></a>
+    <a class="nav-link" href="https://github.com/thesilver-cse/Student-Skill-Management-System"
+       target="_blank" rel="noopener noreferrer">View source ↗</a>
+  </nav>
+
+  <header class="hero">
+    <div class="eyebrow">Java Web Development Project</div>
+    <h1>Learn skills.<br><span>Track progress.</span></h1>
+    <p>
+      SkillTrack is a student skill management system designed to help
+      students organize technical skills, monitor learning progress,
+      and manage learning goals in one place.
+    </p>
+    <div class="actions">
+      <a class="btn primary"
+         href="https://github.com/thesilver-cse/Student-Skill-Management-System"
+         target="_blank" rel="noopener noreferrer">Explore Source Code ↗</a>
+      <a class="btn secondary" href="#features">Explore Features ↓</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="features">
+      <h2>What SkillTrack offers</h2>
+      <p class="intro">A centralized place to organize and monitor learning.</p>
+
+      <div class="grid">
+        <article class="card">
+          <div class="icon">🎯</div>
+          <h3>Skill Management</h3>
+          <p>Add, view, update, and remove skills while organizing them by category and proficiency.</p>
+        </article>
+        <article class="card">
+          <div class="icon">📈</div>
+          <h3>Progress Tracking</h3>
+          <p>Record learning progress and monitor the status of your skills.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🗓️</div>
+          <h3>Learning Goals</h3>
+          <p>Create learning goals, set target dates, and track their completion status.</p>
+        </article>
+        <article class="card">
+          <div class="icon">👤</div>
+          <h3>Student Profile</h3>
+          <p>Manage account details and access your learning information through a personal account.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="technology">
+      <h2>Technology stack</h2>
+      <p class="intro">Built with core Java web technologies.</p>
+      <div class="tech">
+        <span class="tag">Java</span>
+        <span class="tag">JSP</span>
+        <span class="tag">Java Servlets</span>
+        <span class="tag">JDBC</span>
+        <span class="tag">MySQL / MariaDB</span>
+        <span class="tag">Apache Tomcat</span>
+        <span class="tag">HTML &amp; CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Bootstrap</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>How it works</h2>
+      <p class="intro">The application's server-side architecture.</p>
+      <div class="architecture">
+        JSP / HTML → Servlet Controller → DAO → JDBC → Database
+      </div>
+      <p class="note">
+        The project uses a traditional Java web architecture. This public
+        page is a static showcase; it does not connect to the Java backend
+        or database.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h2>Explore the project</h2>
+        <p class="intro">
+          Browse the source code, project structure, and setup instructions
+          in the GitHub repository.
+        </p>
+        <a class="btn primary"
+           href="https://github.com/thesilver-cse/Student-Skill-Management-System"
+           target="_blank" rel="noopener noreferrer">View GitHub Repository ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>SkillTrack — Student Skill Management System</p>
+    <p>Academic project · Built with Java web technologies</p>
+  </footer>
+
+</body>
+</html>
