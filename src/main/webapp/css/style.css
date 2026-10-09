@@ -1,0 +1,200 @@
+/* ==========================================================
+   SkillTrack - Student Skill Management System
+   Clean Academic Theme Stylesheet
+   ========================================================== */
+
+:root {
+    --primary-color: #1e3a8a;       /* Deep Academic Navy */
+    --primary-hover: #1d4ed8;       /* Lighter Royal Blue */
+    --accent-blue: #3b82f6;         /* Bright Blue */
+    --secondary-color: #475569;     /* Slate Gray */
+    --bg-light: #f8fafc;            /* Crisp Off-White */
+    --card-bg: #ffffff;             /* Pure White */
+    --card-border: #e2e8f0;         /* Subtle Gray Border */
+    --text-dark: #0f172a;           /* Dark Slate Text */
+    --text-muted: #64748b;          /* Muted Gray Text */
+    --success-color: #16a34a;       /* Emerald Green */
+    --warning-color: #d97706;       /* Amber */
+    --danger-color: #dc2626;        /* Crimson Red */
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* ------------------- Navbar Styling ------------------- */
+.navbar-custom {
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-custom .navbar-brand {
+    font-weight: 700;
+    font-size: 1.35rem;
+    color: #ffffff !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar-custom .nav-link {
+    color: #cbd5e1 !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* ------------------- Card Components ------------------- */
+.app-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+}
+
+.stat-card {
+    border-left: 5px solid var(--accent-blue);
+    padding: 1.5rem;
+}
+
+.stat-card.stat-completed {
+    border-left-color: var(--success-color);
+}
+
+.stat-card.stat-inprogress {
+    border-left-color: var(--warning-color);
+}
+
+.stat-card.stat-avg {
+    border-left-color: #8b5cf6; /* Violet */
+}
+
+.stat-card .stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.stat-card .stat-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+}
+
+/* ------------------- Badges & Progress ------------------- */
+.badge-level-beginner {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    font-weight: 600;
+}
+
+.badge-level-intermediate {
+    background-color: #fef3c7;
+    color: #b45309;
+    font-weight: 600;
+}
+
+.badge-level-advanced {
+    background-color: #f3e8ff;
+    color: #7e22ce;
+    font-weight: 600;
+}
+
+.badge-status-completed {
+    background-color: #dcfce7;
+    color: #15803d;
+    font-weight: 600;
+}
+
+.badge-status-inprogress {
+    background-color: #ffedd5;
+    color: #c2410c;
+    font-weight: 600;
+}
+
+.badge-status-notstarted {
+    background-color: #f1f5f9;
+    color: #475569;
+    font-weight: 600;
+}
+
+.progress {
+    height: 10px;
+    border-radius: 9999px;
+    background-color: #e2e8f0;
+}
+
+.progress-bar {
+    border-radius: 9999px;
+    transition: width 0.6s ease;
+}
+
+/* ------------------- Tables & Forms ------------------- */
+.table-custom {
+    vertical-align: middle;
+}
+
+.table-custom thead th {
+    background-color: #f1f5f9;
+    color: #334155;
+    font-weight: 600;
+    border-bottom: 2px solid #cbd5e1;
+}
+
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    padding: 0.6rem 0.85rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 0.55rem 1.25rem;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    color: #ffffff;
+}
+
+/* ------------------- Footer ------------------- */
+.footer-custom {
+    background-color: #ffffff;
+    border-top: 1px solid var(--card-border);
+    padding: 1.25rem 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Student_Skill_Management_System" default="default" basedir=".">
+    <description>Builds, tests, and runs the project Student Skill Management System.</description>
+    <import file="nbproject/build-impl.xml"/>
+</project>

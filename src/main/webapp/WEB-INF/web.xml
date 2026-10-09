@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <display-name>Student Skill Management System</display-name>
+
+    <!-- Welcome File List -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- ==================== Servlet Declarations ==================== -->
+
+    <!-- Authentication Servlets -->
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>controller.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>controller.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>controller.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <!-- Dashboard Servlet -->
+    <servlet>
+        <servlet-name>DashboardServlet</servlet-name>
+        <servlet-class>controller.DashboardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DashboardServlet</servlet-name>
+        <url-pattern>/dashboard</url-pattern>
+    </servlet-mapping>
+
+    <!-- Skill CRUD Servlets -->
+    <servlet>
+        <servlet-name>SkillServlet</servlet-name>
+        <servlet-class>controller.SkillServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SkillServlet</servlet-name>
+        <url-pattern>/skills</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddSkillServlet</servlet-name>
+        <servlet-class>controller.AddSkillServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddSkillServlet</servlet-name>
+        <url-pattern>/add-skill</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateSkillServlet</servlet-name>
+        <servlet-class>controller.UpdateSkillServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateSkillServlet</servlet-name>
+        <url-pattern>/edit-skill</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateSkillServlet</servlet-name>
+        <url-pattern>/update-skill</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteSkillServlet</servlet-name>
+        <servlet-class>controller.DeleteSkillServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteSkillServlet</servlet-name>
+        <url-pattern>/delete-skill</url-pattern>
+    </servlet-mapping>
+
+    <!-- Goals Servlets -->
+    <servlet>
+        <servlet-name>GoalServlet</servlet-name>
+        <servlet-class>controller.GoalServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GoalServlet</servlet-name>
+        <url-pattern>/goals</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddGoalServlet</servlet-name>
+        <servlet-class>controller.AddGoalServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddGoalServlet</servlet-name>
+        <url-pattern>/add-goal</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateGoalServlet</servlet-name>
+        <servlet-class>controller.UpdateGoalServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateGoalServlet</servlet-name>
+        <url-pattern>/update-goal</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteGoalServlet</servlet-name>
+        <servlet-class>controller.DeleteGoalServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteGoalServlet</servlet-name>
+        <url-pattern>/delete-goal</url-pattern>
+    </servlet-mapping>
+
+    <!-- Profile Servlet -->
+    <servlet>
+        <servlet-name>ProfileServlet</servlet-name>
+        <servlet-class>controller.ProfileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProfileServlet</servlet-name>
+        <url-pattern>/profile</url-pattern>
+    </servlet-mapping>
+
+    <!-- Session Timeout in minutes -->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+</web-app>
